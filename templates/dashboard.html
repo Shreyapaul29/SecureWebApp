@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background:#E91E63;">
+
+<div class="container">
+
+<a class="navbar-brand fw-bold" href="/">
+
+🌸 Secure Web App
+
+</a>
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+
+<a class="nav-link" href="/logout">
+
+Logout
+
+</a>
+
+</li>
+
+</ul>
+
+</div>
+
+</nav>
+
+<div class="container mt-5">
+
+<div class="row justify-content-center">
+
+<div class="col-md-8">
+
+<div class="card shadow-lg main-card">
+
+<div class="card-header text-center">
+
+<h2 class="title">
+
+🌸 Secure Dashboard
+
+</h2>
+
+</div>
+
+<div class="card-body text-center">
+
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+         width="120"
+         class="mb-3">
+
+    <h3 class="dashboard-name">
+        {{ current_user.username }}
+    </h3>
+
+    <p>
+        {{ current_user.email }}
+    </p>
+
+    <hr>
+
+    <div class="alert alert-success">
+
+        🟢 Authentication Successful
+
+    </div>
+
+    <p>
+
+        Your account is protected using:
+
+    </p>
+
+    <ul class="list-group">
+
+        <li class="list-group-item">
+            🔒 Password Hashing (bcrypt)
+        </li>
+
+        <li class="list-group-item">
+            🛡 SQL Injection Prevention
+        </li>
+
+        <li class="list-group-item">
+            🔐 Authentication
+        </li>
+
+        <li class="list-group-item">
+            ✅ Authorization
+        </li>
+
+        <li class="list-group-item">
+            🧾 CSRF Protection
+        </li>
+
+    </ul>
+
+    <br>
+
+    <a href="/logout" class="btn pink-btn">
+
+        Logout
+
+    </a>
+
+</div>
+
+<h3>
+
+Welcome,
+
+<span class="dashboard-name">
+
+{{ current_user.username }}
+
+</span>
+
+👋
+
+</h3>
+
+<hr>
+
+<p>
+
+You have successfully logged into the Secure Web Application.
+
+</p>
+
+<div class="alert alert-success">
+
+🟢 Authentication Successful
+
+</div>
+
+<a href="/logout" class="btn pink-btn mt-3">
+
+Logout
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<footer class="text-center mt-5 mb-3">
+
+<hr>
+
+<p style="color:#E91E63;">
+
+🌸 Secure Web Application
+
+<br>
+
+Developed by Shreya Paul
+
+<br>
+
+© 2026
+
+</p>
+
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+body{
+    background: linear-gradient(135deg,#FFF0F6,#FFE4EC);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-card{
+    border-radius:20px;
+    border:none;
+}
+
+.card-header{
+    background:#E91E63 !important;
+    color:white;
+    border-radius:20px 20px 0 0 !important;
+}
+
+.pink-btn{
+    background:#E91E63;
+    color:white;
+    border:none;
+    border-radius:12px;
+    width:100%;
+    padding:10px;
+    font-weight:bold;
+}
+
+.pink-btn:hover{
+    background:#d81b60;
+    color:white;
+}
+
+.form-control{
+    border-radius:30px;
+}
+
+.title{
+    font-weight:bold;
+}
+
+.login-link{
+    color:#E91E63;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.login-link:hover{
+    color:#c2185b;
+}
+
+.dashboard-name{
+    color:#E91E63;
+    font-weight:bold;
+}
+
+.alert{
+    border-radius:12px;
+}

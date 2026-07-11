@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Login</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background:#E91E63;">
+
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="/">
+            🌸 Secure Web App
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/register">Register</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Login</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<div class="container mt-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-md-6">
+
+            <div class="card shadow-lg main-card">
+
+                <div class="card-header text-center">
+
+                    <h2 class="title">
+                        🎀 Login
+                    </h2>
+
+                </div>
+
+                <div class="card-body">
+
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                        {% if messages %}
+                            {% for category, message in messages %}
+                                <div class="alert alert-{{ category }}">
+    {{ message }}
+</div>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+
+                    <form method="POST">
+
+                        {{ form.hidden_tag() }}
+
+                        <div class="mb-3">
+
+                            {{ form.email.label(class="form-label") }}
+
+                            {{ form.email(class="form-control") }}
+
+                        </div>
+
+                        <div class="mb-3">
+
+                            {{ form.password.label(class="form-label") }}
+
+                            {{ form.password(class="form-control") }}
+
+                        </div>
+
+                        <div class="d-grid">
+
+                            {{ form.submit(class="btn pink-btn") }}
+
+                        </div>
+
+                    </form>
+
+                    <hr>
+
+                    <p class="text-center">
+
+                        Don't have an account?
+
+                        <a href="/register" class="login-link">
+
+                            Register
+
+                        </a>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<footer class="text-center mt-5 mb-3">
+
+<hr>
+
+<p style="color:#E91E63;">
+
+🌸 Secure Web Application
+
+<br>
+
+Developed by Shreya Paul
+
+<br>
+
+© 2026
+
+</p>
+
+</footer>
+</body>
+
+</html>
